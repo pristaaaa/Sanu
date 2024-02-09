@@ -1,1 +1,1 @@
-
+var m3u8Link="https://cdn-tv.co.in/myweb/watch.php?id=1000009275&e=.m3u8";jwplayer("jwplayerDiv").setup({playlist:[{sources:[{file:m3u8Link}]}],position:"bottom",autostart:true,stretching:"",width:"100%"}).onError(function(e){console.error("JWPlayer Error:",e);});
