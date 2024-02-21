@@ -1,119 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="referrer" content="no-referrer">
     <title>Star Sports Hindi</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.6/shaka-player.compiled.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.6/controls.min.css" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body bgcolor="black" style="margin:0">
+    <script> // script.js
 
-<style>
-    /* Your custom styles go here */
-    .shaka-overflow-menu {
-        background-color: rgb(35, 35, 35);
-        color: rgb(255, 255, 255);
-    }
+// script.js
 
-    /* Add any other custom styles you need */
-</style>
+document.addEventListener('DOMContentLoaded', function () {
+  const shakaPlayerContainer = document.createElement('div');
+  shakaPlayerContainer.setAttribute('data-shaka-player-container', '');
+  shakaPlayerContainer.style.width = '100%';
+  shakaPlayerContainer.style.height = '100%';
+  shakaPlayerContainer.style.cursor = 'none';
+  shakaPlayerContainer.className = 'shaka-mobile shaka-video-container';
+  shakaPlayerContainer.setAttribute('shaka-controls', 'true');
 
-<center>
+  const shakaVideo = document.createElement('video');
+  shakaVideo.poster = 'https://linear-poster.astro.com.my/prod/poster/ivp_default_10000229_IVP_LAND_586x330.jpg';
+  shakaVideo.autoplay = true;
+  shakaVideo.setAttribute('data-shaka-player', '');
+  shakaVideo.id = 'video';
+  shakaVideo.style.width = '100%';
+  shakaVideo.style.height = '100%';
+  shakaVideo.className = 'shaka-video';
 
-  <a href="https://your_redirect_url_here" target="_blank">
-            <img src="https://i.im.ge/2024/02/21/g5zUaz.IMG-20240221-173420-036.jpg" alt="Poster" style="width: 980px; height: 310px;">
-  </a>
+  shakaPlayerContainer.appendChild(shakaVideo);
 
-    <div data-shaka-player-container="" style="width: 100%; height: 100%" class="shaka-mobile shaka-video-container" shaka-controls="true">
-        <video autoplay="" data-shaka-player="" id="video" style="width:100%;height:100%;"></video>
-        <div class="shaka-controls-container" shown="true"></div>
-        <div class="shaka-spinner-container">
-            <div class="shaka-spinner">
-                <svg class="shaka-spinner-svg" viewBox="0 0 30 30">
-                    <circle class="shaka-spinner-path" cx="15" cy="15" r="14.5" fill="none" stroke-width="1" stroke-miterlimit="10"></circle>
-                </svg>
-            </div>
-        </div>
-    </div>
-</center>
+  const centerElement = document.createElement('center');
+  centerElement.appendChild(shakaPlayerContainer);
 
-<script>
-    const manifestUri = "https://bpprod5linear.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd";
-    
-    async function init() {
-        const video = document.getElementById('video');
-        const ui = video['ui'];
-        const controls = ui.getControls();
-        const player = controls.getPlayer();
+  document.body.appendChild(centerElement);
 
-        const config = {
-            enableKeyboardPlaybackControls: true,
-            'seekBarColors': {
-                base: 'rgba(255,255,255,.2)',
-                buffered: 'rgba(255,255,255,.4)',
-                played: 'rgb(255,0,0)',
-            },
-        };
-        ui.configure(config);
+  const telegramDiv = document.createElement('div');
+    telegramDiv.style.backgroundColor = '#0074d9';
+    telegramDiv.style.textAlign = 'center';
+    telegramDiv.style.padding = '10px';
 
-        player.configure({
-            drm: {
-                "clearKeys": {
-                    '6a9e4204f3f8577ebf6e79b3b18573f8': '78ca20d6f8be904eec61c0e9aca3c511'
-                }
-            }
-        });
+    const telegramLink = document.createElement('a');
+    telegramLink.href = 'https://t.me/+vi_UBdhOsN5jYzY1';
+    telegramLink.target = '_blank';
 
-        document.addEventListener('keydown', (e) => {
-            // Your keyboard event handling code goes here
-        });
+    const joinTelegramButton = document.createElement('button');
+    joinTelegramButton.id = 'joinTelegramButton';
+    joinTelegramButton.style.backgroundColor = '#fff';
+    joinTelegramButton.style.color = '#0074d9';
+    joinTelegramButton.style.border = '2px solid #0074d9';
+    joinTelegramButton.style.padding = '5px 10px';
+    joinTelegramButton.textContent = 'Join Telegram';
 
-        player.addEventListener('error', onPlayerErrorEvent);
-        controls.addEventListener('error', onUIErrorEvent);
+    telegramLink.appendChild(joinTelegramButton);
+    telegramDiv.appendChild(telegramLink);
 
-        try {
-            await player.load(manifestUri);
-            console.log('The video has now been loaded!');
-            
-            // Hide the spinner after loading
-            const spinnerContainer = document.querySelector('.shaka-spinner-container');
-            spinnerContainer.style.display = 'none';
-        } catch (error) {
-            onPlayerError(error);
-        }
-    }
+    document.body.appendChild(telegramDiv);
 
-    function onPlayerErrorEvent(errorEvent) {
-        onPlayerError(errorEvent.detail);
-    }
+  // Continue with the rest of your script content...
 
-    function onPlayerError(error) {
-        console.error('Error code', error.code, 'object', error);
-    }
-
-    function onUIErrorEvent(errorEvent) {
-        onPlayerError(errorEvent.detail);
-    }
-
-    function initFailed(errorEvent) {
-        console.error('Unable to load the UI library!');
-    }
-
-    document.addEventListener('shaka-ui-loaded', init);
-    document.addEventListener('shaka-ui-load-failed', initFailed);
-
-if(confirm(" Join Our Telegram For More Live Links. ")) { window.location.href = "https://t.me/criccoder" }
+  // Function to initialize Shaka Player
   
-</script>
 
-  <div style="background-color: #0074d9; text-align: center; padding: 10px;">
-    <a href="https://t.me/criccoder" target="_blank">
-      <button id="joinTelegramButton"
-        style="background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;">Join
-        Telegram</button>
-    </a>
-  </div>
+  // Continue with the rest of your script content...
+});
 
+      // Add the meta tag dynamically
+const metaTag = document.createElement('meta');
+metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
+metaTag.setAttribute('content', "frame-ancestors 'none';");
+document.head.appendChild(metaTag);
+
+// Add the Shaka Player UI script dynamically
+const shakaUIScript = document.createElement('script');
+shakaUIScript.src = "https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.ui.min.js";
+document.head.appendChild(shakaUIScript);
+
+// Add the user-select style
+const userSelectStyle = document.createElement('style');
+userSelectStyle.type = 'text/css';
+userSelectStyle.textContent = '* {user-select: auto !important; -webkit-user-select: auto !important;}';
+document.head.appendChild(userSelectStyle);
+
+// Add the Shaka Player controls stylesheet dynamically
+const shakaControlsStylesheet = document.createElement('link');
+shakaControlsStylesheet.href = "https://cdn.jsdelivr.net/npm/shaka-player/dist/controls.min.css";
+shakaControlsStylesheet.rel = "stylesheet";
+document.head.appendChild(shakaControlsStylesheet);
+
+// Continue with the rest of your script content
+
+if (confirm("Join Our Telegram Channel For More Links")) { window.location.href = "https://t.me/+vi_UBdhOsN5jYzY1" }
+
+const manifestUri = "https://bpprod5linear.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd";
+
+async function init() {
+    const video = document.getElementById('video');
+    const ui = video['ui'];
+    const controls = ui.getControls();
+    const player = controls.getPlayer();
+    window.player = player;
+    window.ui = ui;player.configure({
+        drm: {
+            "clearKeys": {
+                '6a9e4204f3f8577ebf6e79b3b18573f8': '78ca20d6f8be904eec61c0e9aca3c511'
+            }
+        }
+    });
+
+    player.addEventListener('error', onPlayerErrorEvent);
+    controls.addEventListener('error', onUIErrorEvent);
+
+    try { await player.load(manifestUri); console.log('The video has now been loaded!'); }
+    catch (error) { onPlayerError(error); }
+}
+
+function onPlayerErrorEvent(errorEvent) { onPlayerError(event.detail); }
+function onPlayerError(error) { console.error('Error code', error.code, 'object', error); }
+function onUIErrorEvent(errorEvent) { onPlayerError(event.detail); }
+function initFailed(errorEvent) { console.error('Unable to load the UI library!'); }
+
+document.addEventListener('shaka-ui-loaded', init);
+document.addEventListener('shaka-ui-load-failed', initFailed);
+
+      
+                                    </script>
+      <a href="https://batcoin9.club/" target="_blank">
+            <img src="https://i.im.ge/2024/02/21/g5zUaz.IMG-20240221-173420-036.jpg" alt="Poster" style="width: 390px; height: 150px;">
+      </a>
 </body>
-  </html>
+</html>
