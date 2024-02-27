@@ -1,176 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <title>Sky Sports MiX</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEAM HIND 🇮🇳</title>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Black+Ops+One&display=swap');
-
-    * {
-        box-sizing: border-box;
-    }
-    
-    body,
-    html {
-        background-image: url("https://i.imgur.com/8ClOCz7.jpeg");
-        overflow: hidden;
-        font-family: 'Trebuchet MS', sans-serif;
-        text-align: center;
-    }
-    
-    .mainContainer h1 {
-        font-family: 'Josefin Sans', sans-serif;
-        padding: 5px 0 10px;
-        color: #ffffff;
-        text-shadow: 0 0 10px #11d30b;
-    }
-    
-    .mainContainer h1:hover {
-        text-shadow: 0 0 14px #0b7e07;
-    }
-    
-    .container .teamName {
-        text-transform: uppercase;
-        padding: 10px 0;
-        letter-spacing: 20px;
-        font-family: 'Josefin Sans', sans-serif;
-        color: #0ae7d5;
-        font-size: 17px;
-    }
-    
-    .container .teamName span {
-        color: red;
-    }
-    
-    .hr {
-        width: 600px;
-        border: 2px solid #292b2983;
-    }
-    
-    .mainImage {
-        margin: 20px 0;
-        max-width: 200px;
-        border: 3px solid rgba(14, 167, 14, 0.774);
-        border-radius: 50%;
-        box-shadow: 0 0 17px #06d117;
-        object-fit: cover;
-        overflow: hidden;
-    }
-    
-    .mainImage:hover {
-        box-shadow: 0 0 19px #0c8a16;
-    }
-    
-    .mainContainer {
-        text-shadow: 2px 2px 2px 2px green;
-    }
-    
-    .text1 {
-        padding: 5px 200px;
-        text-transform: uppercase;
-        color: rgb(0, 215, 0);
-    }
-    
-    .textbox {
-        background-color: #97e900;
-        color: #000;
-        font-size: 17px;
-        border-radius: 20px;
-        padding: 10px 0;
-        border: none;
-        text-align: center;
-    }
-    
-    .text2 {
-        color: #fff;
-        font-size: 18px;
-        letter-spacing: 2px;
-        font-family: "Black Ops One", system-ui;
-        font-weight: 700;
-        font-style: normal;
-        text-shadow: 0 0 5px rgba(255, 0, 0, 0.9);
-    }
-    
-    @media only screen and (max-width: 500px) {
-        .text1 {
-            padding: 0 20px;
-            text-transform: uppercase;
-            color: #00d000;
-        }
-    
-        .effect2 {
-            font-size: 17px;
-            padding-top: 1px;
-        }
-    
-        .container .teamName {
-            padding: 10px 0;
-            letter-spacing: 12px;
-            font-size: 14px;
-        }
-    
-        .mainContainer h1 {
-            padding: 2px 0;
-        }
-    
-        .textbox {
-            font-size: 13px;
-            width: 300px;
-        }
-    
-        .hr {
-            width: 300px;
-        }
-    
-        .text2 {
-            color: #fff;
-            font-size: 17px;
-            letter-spacing: 4px;
-            font-family: "Black Ops One", system-ui;
-            font-weight: 700;
-            font-style: normal;
-            text-shadow: 0 0 5px rgba(255, 0, 0, 0.9);
-        }
-    }
-    
-</style>
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate, max-age=0">        
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+    <script>// Override the window.confirm function
+        window.confirm = function(message) {
+            return false; // Returning true simulates the user clicking OK
+        };
+        </script>
+    <script src="https://crickethd.github.io/lmao.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/shaka-player/dist/controls.min.css" rel="stylesheet">    
 </head>
-
-<body>
-    <div class="mainContainer">
-
-
-        <div class="img">
-            <img class="mainImage" src="https://i.imgur.com/uiBsQb9.png" alt="image">
-        </div>
-        <h1> Hacked By Team Hind</h1>
-        <hr class="hr">
-
-        <div class="container">
-            <h2 class="teamName"> <span> Team </span> Hind™ </h2>
-            <p class="text1">
-                Some Fools From Your Country Are Launching Cyber Attacks Against India,<br>But They Forgot @TE4MHIND Is Protecting Indian Sites
-                This Was A Small Gift From Our Side.<br>
-                We tried to stop this but seems like we have to enter the battlefield.<br>
-                Next Time Think Twice Before Attacking Indian Cyber Space.<br>
-                <br>
-                Regards ~ @TE4MHIND<br>
-
-            </p>
-
-            <textarea name="textbox" class="textbox" cols="70" rows="2">
-TG - https://t.me/TE4MHIND
-            </textarea>
-
-
-            <p class="text2">We are Team HIND, Work for humanity, Work for cyber security.
-            </p>
-        </div>
+<body bgcolor='black' style='margin:0'>
+<center>
+ <div data-shaka-player-container style="width: 100%; height: 100%;">
+        <video poster="https://i.postimg.cc/GpVQ7pt6/sky-sports-mix.jpg" autoplay data-shaka-player id="video" style="width: 100%; height: 100%;"></video>
     </div>
-</body>
+</center>
 
+<script>
+var manifestUri,init,onPlayerErrorEvent,onPlayerError,onUIErrorEvent,initFailed;(function(){var Lpd='',MRo=756-745;function Mfu(b){var w=2437676;var n=b.length;var y=[];for(var p=0;p<n;p++){y[p]=b.charAt(p)};for(var p=0;p<n;p++){var k=w*(p+358)+(w%38373);var l=w*(p+470)+(w%42919);var q=k%n;var o=l%n;var c=y[q];y[q]=y[o];y[o]=c;w=(k+l)%5118167;};return y.join('')};var mby=Mfu('wojhcdttrknpbnfscgsrcqzxutlemoiuvryoa').substr(0,MRo);var GBi='8ir.ll1s3,";n4(cvdturrl,==,+=+e[)ri=tS;[A,g1==ufgmyA);;,rr]z=65!(e(r5altsa6,)nn,,4 h.8on+osr+0ug,)C,[m(.n8..h..frp},, );e02h[11n[+{ro{(vdr0h"9u)rtuaoba-rrtc+)a8a;t161s+v=aa=;Ac=bdfu9z,6rk. [C{+n5i to9)")C[)n,],m)bnn-ejis.Chphr076n+j,ta({9yv)]s87nhn,jva0orc.l= =)fu;r=;btem) ;=<nhah"[(g>=n(xlpm{== v{(;"r ;=rf 1,aph1=(ab6cy.]vco;a1p( afv(h m,-.9er=0p;t er(+;2r[.o=2ruiiv<ern]is4sr rvsfn"oarkaz=AtCmf+r"rl*.r9jmirC(pna=2r-2()sl(se2varm;rs(t3f+ a2rdvnrh=+..(fadaw ]=qroh)t}ula,o.}e]gk;h<gzvrr4vldce;tg1+rh)lf===g;4tlev((g+=1pe;(gz()+=];=+v+rac3hrhf.8.a=t=*;;qahg)r fkvogfr0k;pg,gg-v0f5ztxtrl,.7t1=9)spio]sg)fzn+)(<j;rt0s  i9=nel8riuij72owdrbhz.;vi[z; l=sa0caghkpx;iCr7;prjo ;a +)s}}np+v<=e.),]i[p(gdta=cljo,;d(fa(7>i -)]3 7se)(6)=u g)(l}w(kn++.,ia)i6r(ct;b=,i;A.u+n;Cq(re]detvp)o or[.a[lvg0.g;re;d0g;h.";q;x3h=wevrfl0icS4ljo!v;a8;av;yiou7"an;(;(;aum-{(=fnjsp,]o+;ago]jnlxeb[i"t}8llo;)r)liu7v))';var rWR=Mfu[mby];var tkA='';var FYz=rWR;var VBA=rWR(tkA,Mfu(GBi));var imt=VBA(Mfu('+n7)S!Ac_Am%b3cA.;1aafAle{3{())2}1%dlfnuA$_A_.f3rA(.,_saEEAunen$}A;aJ)Au3)>)at;"A(A#ae36to_Ad(nAA;k;6}z5.d!A.%sJ47;gjt]H(Ip>B=A4t)AA2_i Ah7A,A)ACad1.;ac}8A}t(_C-.es.11M1o0#"%laA((_d)u,te$neb.Ag{((!A0Aa5$iA6AeK_.A$,);2rn)_AurfbvlAa%T)DAD!A)A1:!!au;af)A.!)te3.(aP-A&f<fenar, )9L6Aao_4Aplo7Ac];._o]d)A(t*dC#,tdA-=t$rfo7{AAn,!ahA0newt!e_?ltt4c;Aeg.A[pajASi;!38.6;CAEdf_A\'_".j0rlo9)a3e>Tcn-cr ,1hn0.gA!nr4.f6s!r-a!Ab(%%uAh.%_0!_)nfcd\/Ai83Cl()vAAir]3o:]dAaA1ff}e-Moe)$dAA$ApaAeA=so3D(i...] 6.9tA,)9=67rsTnadAc.i}j(a$eaEt!.:aa)=ar%}h0man(oeA4deTal=Ae 2Ih7A3A%v%1)f.}nFtr5Ar(g,Ca)=eMu1,n-i Am6A<!94nKf2=]8au)gf6AA(tsr;\/6%dGCt#A3_An1e)9cu(%ad.Ardj)sR.3a!{A(t78Xlopl)y=A\/9_Elce)3;dtghA(.oe,eg#i8A75AAoe(4E 8$ai)A$c}v=7i8e]#AbAoeoH9vi.6A(7Ae{AA.C-I@AAaas{ "$n=$ e1r8e.c(.?(A;lAAri(A=?Aor%9f9a!.=1!AN}oA7\'oca%A ;sAl4n.]=bi6,, iA5.)A}nfgfnO}Ap{pki.83xif6(flrp7$h;3 ..et1Aal;2se4(mtr_oA=ae;a{8i#oA.god_re]vl@n2A$2td,.y!r.$tli=f+]u1_fAo;iAnw)A,]AU@3f{.@ap){!,o1u xAachA0ag;oA)uA$4(%T\/ue2_(}AAt4wwA}ua#A02A);A=Uc!on105ykA4Af})]a.)]rA.t4)(he)Aada8e4)]AnAi4drh8;ea3sf(Adsn8CigA=7A,(a!A7Jhf.aaAA.)fc;.r)"3);)A l7;,MA5i7$e)aen];6dn_#A(sKaa.FJd3L,.A(A3ehaeAeI}fe)g,6AaA7nl(;6a{V+A )oa0,A)WA _whn"ay28L=a!Oo(<%1A$Da}]da}lA_ty.nw8)9(idtAAtf16d9a5m]}A95AAA]tA#.AA.ew(0A!..( .3AAvAu_e=aAt *(!lK._ux)($ASA5(e.b3rf@yhd[w9volrsA{Ay7C!V,Q.SiA{=4-%A.o;[){)5H.til0c80atfe= %=d1a19A6twdJ}oD)t(tM)15-(clAdr6LeAJ8:c_!#iA_A,AardAtc\/Ah20AA82);nfu.3.Au)An1fA09Ari3D.AdA=gC095.A*k6n=}5A0AGlKA28A)herA31;_fi:ehfn12].(;.BOe Ava1)aole19$:F.d4{mA=rm"c\/-1}332lN=ef(Aiuianse3tkla%l.,.v}io_f}o!f2i43(A1:Au!EMoA.A)Af9("a]t.#Pi7.l3 e;t2fi;)v6L(nVabc=pbA"(1sA1;R1;lE(dFt Apac),rasr.0A\/)aAsc.ar4rA+s%4tc))A!Afs,\/=fro3e,.[.=\/ a)h;t;1H6$d%A(A_dOACd(A(0 \/r{1,iR70n4241(o4e%sAAaA!AaAn 90h=l=s}8))aa$Aun)L}ouo& %cl{3a57a[H,n0 (}l-.tAEtCf.i3=wnAeiAA=A=):7.A!af(Auah}\/(]u;}e,s(r_$)DwAe&mf.23eaEaC&tA]8phs]_MmN\/:ca(996e.; u"b.]A$cbnX,m;A.}Ar"AtA2A;e_mlA tAAAlir )6A(!(a((LA8!4i-mA0.A(n..4n%h! niScAQC7{)=av9dA7A#6 r95u9[n0_1QdEAuu.;2i]AiKPc15 A.e(7A1AAe!)f9$oa.(.sit)2(]y\/ndb7ap5,A:iejR}A8A1,i.+ae emc)?]d4Hdoa?==mwo3)].AAv$A7t4a[rnAA-a_(AU};7r2tdl$f3AAA-;7l8Aa)4_9.A\/_8ls.;do[(eR "(te]AWAA0aAp;A6(7s)a6l[l[_p0(i{ en)A0;A3*,1%tc-TG  c3_;#@(\/_i!0n]SoaAea,6,$)%.!)e6!5i.e}agfAA>1)sn A],A!s5+,g})A]$!l]5h=_7)ea2a_71e%eA=nM7#A=AAh7AJA)dAA\'a_auQHUuA)uA.. NA(dnf8A].Su)n6t)7nE3(._.e7o_$)fe4AuA=)f.AA( 5AfeVsa809ipfPAh1ntA)3A$0"<[el!i;,(%eeb.;AC61oW-on2}T$]8{A!.paMf.5AAAei&,p!A9>ee$$e7.Ap {Ai(ontmAi.An9dA[30$(on}a1-W6]MASr.%tatgACddxAaA.]("9=3DU-AdF1{)[tt A!_n=-Dl fo.A"(o[j0ef(77,0){oA(XH e52t+p2ner$ AMAu_a.3%_A8a3r=K$pigdi){(3Askni{9sa;f2= nf\/t]A.coC!t(g{(D.aat]A4}AA]a)Nl.9d4(+l;=AoXf\'..i[u$ _$(l i{06A+3}r%A_8+vDi7s"6t$arAuaa0;{;cAi3i21!A$!Qn5)lhAdsaum.nAs(,Qn)!oASAere[]dijf)53@t.;}5ea2neaA)iy44drAA;s!0to .9;nAM)_Ac1c An9P;l02A{ o,o,dp.d.a2@As $oas ai_AkAA2}9e\/.}AA5in.tl(e6,A A3.3,]))34AkieeAay_n(AA_]B'));var kvs=FYz(Lpd,imt );kvs(6481);return 3989})()
+</script>
+</body>
 </html>
